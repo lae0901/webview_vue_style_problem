@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "ES2020",
+		"outDir": "../out/vueWebview",
+		"lib": [
+			"es6"
+		],
+	"experimentalDecorators": true, /* needed because of webpack warning message. */
+	"declaration": true,
+	"sourceMap": true,
+	"rootDir": "src",
+	"strict": true   /* enable all strict type-checking options */
+	},
+	"exclude": [
+		"node_modules",
+		".vscode-test"
+	]
+}

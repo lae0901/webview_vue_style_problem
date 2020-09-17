@@ -1,0 +1,60 @@
+{
+	"name": "webview_vue_style_problem",
+	"displayName": "webview_vue_style_problem",
+	"description": "vue style not working in vscode extension webview",
+	"author": "Stephen Richter",
+	"version": "1.0.1",
+	"publisher": "SteveRichter",
+	"engines": {
+		"vscode": "^1.49.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.vueWebview",
+				"title": "vue webview"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch",
+		"build": "npm run build-media && npm run build-extension",
+		"build-media": "sh ./scripts/build-media.sh",
+		"build-extension": "tsc -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^10.17.32",
+		"@types/vscode": "^1.49.0",
+		"css-loader": "^4.3.0",
+		"style-loader": "^1.2.1",
+		"ts-loader": "^8.0.3",
+		"typescript": "^3.3.1",
+		"vscode-test": "^1.2.0",
+		"vue-loader": "^15.9.3",
+		"vue-property-decorator": "^9.0.0",
+		"vue-template-compiler": "^2.6.12",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lae0901/webview_vue_style_problem.git"
+	},
+	"dependencies": {
+		"bootstart": "0.0.0",
+		"bootstrap-vue": "^2.16.0",
+		"jquery": "^1.12.4",
+		"vue": "^2.6.12",
+		"vue-class-component": "^7.2.5",
+		"vue-router": "^3.4.3"
+	}
+}
